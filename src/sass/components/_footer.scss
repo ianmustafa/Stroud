@@ -1,0 +1,33 @@
+.footer {
+  color: $footer-color;
+  background-color: $footer-bg;
+
+  padding: 40px 0;
+
+  &-left, &-right {
+    @media (min-width: $footer-breakpoint) {
+      width: 49%;
+    }
+  }
+
+  &-left {
+    margin-bottom: 20px;
+
+    @media (min-width: $footer-breakpoint) {
+      margin-bottom: 0;
+    }
+
+    img {
+      display: inline-block;
+      height: 40px;
+    }
+  }
+
+  @media (min-width: $footer-breakpoint) {
+    &-left { float: left; }
+    &-right {
+      text-align: right;
+      float: right;
+    }
+  }
+}

@@ -1,0 +1,121 @@
+.timeline {
+  overflow-x: hidden;
+
+  font-size: $timeline-font-size;
+  color: $timeline-color;
+
+  padding: ($padding-large-vertical * 4) 0 ($padding-large-vertical * 6);
+  background-color: $timeline-bg;
+
+  h1 {
+    text-align: center;
+    margin-bottom: ($padding-large-vertical * 3);
+  }
+
+  &-line {
+    position: relative;
+    list-style-type: none;
+    height: (6 * $padding-large-vertical);
+    padding: 0;
+    margin: (4 * $padding-large-vertical) 9px 0;
+    border-top: $timeline-line-width solid $timeline-color;
+
+    &::before, &::after {
+      position: absolute;
+      content: '';
+      display: block;
+      width: 9999px;
+      border-top: $timeline-line-width solid $timeline-color;
+      top: (-$timeline-line-width);
+    }
+
+    &::before { right: 100%; }
+    &::after  { left: 100%; }
+
+    li {
+      position: absolute;
+
+      &.dot {
+        top: -10px;
+        width: 17px;
+        height: 17px;
+        border-radius: 50%;
+        background-color: $timeline-color;
+        cursor: pointer;
+        transform: translateX(-50%);
+        z-index: 5;
+
+        @media (min-width: $screen-sm-min) {
+          top: -13px;
+          width: 21px;
+          height: 21px;
+        }
+
+        &.active {
+          background-color: $timeline-color-active;
+        }
+      }
+
+      &.start, &.end {
+        top: (4 * $padding-large-vertical);
+
+        @media (min-width: $screen-md-min) {
+          transform: translateX(-50%);
+        }
+      }
+
+      &.start {
+        left: 0;
+        transform: translateX(-9px);
+
+        @media (min-width: $screen-md-min) {
+          transform: translateX(-50%);
+        }
+      }
+
+      &.end {
+        right: 0;
+        transform: translateX(9px);
+
+        @media (min-width: $screen-md-min) {
+          transform: translateX(50%);
+        }
+      }
+    }
+
+  }
+
+  &-expanded {
+    list-style-type: none;
+    padding: 0;
+    margin-top: (4 * $padding-large-vertical);
+
+    .item {
+      @include make-row;
+      display: none;
+      outline: none;
+
+      &.slick-slide {
+        display: block;
+      }
+
+      &-img {
+        @include make-sm-column(4);
+        @include make-lg-column(3);
+        @include make-lg-column-offset(1);
+
+        img {
+          @include img-responsive;
+
+          border-radius: 50%;
+          margin: 0 auto;
+        }
+      }
+
+      &-content {
+        @include make-sm-column(8);
+        @include make-lg-column(7);
+      }
+    }
+  }
+}
