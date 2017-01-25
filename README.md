@@ -1,3 +1,3 @@
-# Stroud: Proyek Konversi PSD ke HTML
+# Stroud: Proyek konversi PSD ke HTML
 
 Oleh Ian Mustafa.
