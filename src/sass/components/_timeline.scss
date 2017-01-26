@@ -20,6 +20,12 @@
     margin: (4 * $padding-large-vertical) 9px 0;
     border-top: $timeline-line-width solid $timeline-color;
 
+    display: none;
+
+    @media (min-width: $screen-md-min) {
+      display: block;
+    }
+
     &::before, &::after {
       position: absolute;
       content: '';

@@ -4,7 +4,6 @@
   font-size: $case-study-font-size;
   color: $case-study-color;
 
-  padding: ($padding-large-vertical * 4) 0 0;
   background-color: $case-study-bg;
 
   h1 {
@@ -22,7 +21,7 @@
     &-wrapper {
       position: relative;
       background-color: $case-study-bg;
-      padding-bottom: ($padding-large-vertical * 4);
+      padding: ($padding-large-vertical * 4) 0;
       border-bottom: 6px solid $case-study-border;
       z-index: 10;
     }
