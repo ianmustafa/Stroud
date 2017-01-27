@@ -2,6 +2,7 @@ $(function () {
   var timeline = $('.timeline-expanded').slick({
     accessibility: false,
     adaptiveHeight: true,
+    speed: 300,
     arrows: false,
     infinite: false,
     mobileFirst: true,
@@ -12,7 +13,7 @@ $(function () {
     $('.timeline-line .dot[data-id="' + (next + 1) + '"]').addClass('active')
   })
 
-  $('.timeline-line .dot').on('click', function (e) {
+  $('.timeline-line .dot').on('mouseover', function (e) {
     timeline.slick('slickGoTo', this.dataset.id - 1)
   })
 
