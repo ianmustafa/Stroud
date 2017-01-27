@@ -3742,6 +3742,7 @@ a.thumbnail.active {
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
+  padding-top: 12px;
 }
 
 @media (min-width: 768px) {
@@ -3755,6 +3756,12 @@ a.thumbnail.active {
   .timeline-expanded .item-content {
     float: left;
     width: 58.3333333333%;
+  }
+}
+
+@media (min-width: 768px) {
+  .timeline-expanded .item-content {
+    padding-top: 0;
   }
 }
 

@@ -121,6 +121,12 @@
       &-content {
         @include make-sm-column(8);
         @include make-lg-column(7);
+
+        padding-top: ($padding-base-vertical * 2);
+
+        @media (min-width: $screen-sm-min) {
+          padding-top: 0;
+        }
       }
     }
   }
