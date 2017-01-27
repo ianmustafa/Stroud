@@ -27,19 +27,28 @@ $case-study-font-size:        16px;
 $case-study-color:            #fff;
 $case-study-border:           $brand-orange;
 $case-study-bg:               $brand-light-gray;
+
 $case-study-h1-color:         $case-study-color;
 $case-study-h3-size:          24px;
 $case-study-h3-size-large:    32px;
 $case-study-img-border:       $case-study-color;
+
+$case-study-tabs-padding-top:       ($padding-large-vertical * 4);
+$case-study-tabs-padding-bottom:    ($padding-large-vertical * 6);
 
 $case-study-caret-color:            $case-study-border;
 $case-study-caret-width-small:      32px;
 $case-study-caret-width:            48px;
 $case-study-caret-width-large:      64px;
 
-$case-study-caret-bottom-small:     -84px;
-$case-study-caret-bottom:           -100px;
-$case-study-caret-bottom-large:     -120px;
+$case-study-caret-bottom-small:     -($case-study-tabs-padding-bottom + 10);
+$case-study-caret-bottom:           -($case-study-tabs-padding-bottom + 10);
+$case-study-caret-bottom-large:     -($case-study-tabs-padding-bottom + 10);
+
+// Use this for bottom position
+// $case-study-caret-bottom-small:     -84px;
+// $case-study-caret-bottom:           -100px;
+// $case-study-caret-bottom-large:     -120px;
 
 $case-study-expanded-h2-color:      darken($gray, 5%);
 $case-study-expanded-color:         $gray-light;
